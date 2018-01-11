@@ -10,9 +10,13 @@ import UIKit
 
 class SecondVC: UIViewController {
 
+    @IBOutlet weak var etiqueta: UILabel!
+    var nombre : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        etiqueta.text = nombre
+        
         // Do any additional setup after loading the view.
     }
 
