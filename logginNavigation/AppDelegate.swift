@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //Cambiar el color del fondo
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        //Cambiar el color de los botones por default
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        //nombre de las fuentes en iosfonts.com
+        //Cambia la fuente de los titulos
+        let font = UIFont(name: "ChalkboardSE-Bold", size: 20)!
+        let attributes = [NSAttributedStringKey.font: font]
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        //Cambia la fuente de los botones de back
+        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal)
         return true
     }
 
